@@ -1,0 +1,20 @@
+@model Idea
+
+<body style="background-color: antiquewhite;">
+    
+</body>
+<div>
+    <form class="form-group"  asp-controller="Home" asp-action="CreateIdea" method="post">
+
+        <div>
+            <div>
+                <label asp-for="Title"></label>
+                <input asp-for="Title" class="form-control">
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary text-right">Post Idea</button>
+    </form>
+</div>

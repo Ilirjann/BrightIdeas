@@ -1,0 +1,28 @@
+<br>
+<body style="background-color: #f0f8ff;"></body>
+@await Html.PartialAsync("_nav")
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="display-4">User Profile</h3>
+            <dl class="row">
+                <dt class="col-sm-3">Name:</dt>
+                <dd class="col-sm-9">@ViewBag.SingleUser.Name</dd>
+
+                <dt class="col-sm-3">Alias:</dt>
+                <dd class="col-sm-9">@ViewBag.SingleUser.Alias</dd>
+
+                <dt class="col-sm-3">Email:</dt>
+                <dd class="col-sm-9">@ViewBag.SingleUser.Email</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <hr class="my-4">
+            <h3 class="display-4">Total Number of Ideas: @ViewBag.SingleUser.CreatedIdeas.Count</h3>
+        </div>
+    </div>
+</div>

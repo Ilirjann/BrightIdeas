@@ -1,0 +1,19 @@
+﻿﻿<link rel="stylesheet" href="~/css/index.css">
+<body style="background-size: cover;">
+    <video muted autoplay loop src="~/video/video.mp4"></video>
+    <div class="konteiner">
+    <div class="container container-responsive">
+        <div class="text-center mt-5">
+            <h1 class="display-4 text-white text-center">Welcome!</h1>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 col-responsive">
+                @await Html.PartialAsync("_Register")
+            </div>
+            <div class="col-md-6 col-responsive">
+                @await Html.PartialAsync("_Login")
+            </div>
+        </div>
+    </div>
+    </div>
+</body>

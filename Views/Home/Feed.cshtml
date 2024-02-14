@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="~/css/feed.css">
+<script defer src="~/js/site.js"></script>
+@model User
+
+@await Html.PartialAsync("_nav")
+<br>
+
+<body style="background-color: #f0f8ff;">
+    
+</body>
+<div>
+    <partial name="_NewIdea"/>
+</div>
+
+<hr>
+<br>
+<div class="container mt-5 w-50 ">
+    @{
+        foreach (Idea idea in ViewBag.AllIdeas)
+        {
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="user/@idea.Creator.UserId">@idea.Creator.Name</a> says:
+                    </h5>
+                    <p class="card-text ideaBox">@idea.Title</p>
+                    <div class="ideaNext">
+                        <a  href="/ideas/@idea.IdeaId/like"> <span class="as btn btn-white" onclick="Like(this)">💙</span></a>
+                        <a  href="/ideas/@idea.IdeaId"><span>@idea.Likes.Count people Like this.</span></a>
+
+                        @if(ViewBag.LoggedUser.UserId == idea.UserId)
+                        {
+                            <a href="/idea/@idea.IdeaId/edit" class="btn btn-info float-right ">Edit</a>
+                            <a href="/idea/@idea.IdeaId/delete" class="btn btn-danger float-right ml-2 btn-danger">Delete</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="~/css/nav.css">
+<header>
+    <nav style="border-radius: 20px;"
+        class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 text-center">
+        <div class="container-fluid">
+
+            <h2 style="margin-right: 50px;">Media Share Idea</h2>
+            <br>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex m-auto justify-content-between">
+                <ul class="navbar-nav border-right flex-grow-1" style="gap: 50px;">
+                    <li class="nav-item d-flex align-items-center gap-20 text">
+                        <a class="nav-link button text-white " asp-area="" asp-controller="Home"
+                            style="font-weight: 500;" asp-action="Feed">Home</a>
+                            <p class="margin-0 text">Hi @ViewBag.userName.Name</p>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        
+                        <a class="nav-link text-dark btn btn-danger rounded-10 text-white" href="/logout">Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
